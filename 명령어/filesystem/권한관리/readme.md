@@ -2,6 +2,8 @@
 - https://recipes4dev.tistory.com/175
 - https://eunguru.tistory.com/93?category=667830
 
+- 특수권한 관련 : https://eunguru.tistory.com/115
+
 
 ## 1. 접근 권한 관리 (chmod) 
 - 기존 파일 또는 디렉터리에 대한 접근 권한(file mode)을 변경하는 명령어
@@ -82,3 +84,12 @@
     </tbody>
 </table>
 
+### 접근권한을 숫자로 표현
+- 8진수 표기법을 사용. 
+- 3자리의 8진수로 소유자(u),그룹사용자(g),기타사용자(o)를 위한 파일모드를 설정가능. 
+- r(읽기,4) , w(쓰기,2) , x(실행,1)
+- 예) chmod 755 test.sh 
+
+
+## 1-2. 특수 권한 (setuid, setgid, sticky bit)
+- 
