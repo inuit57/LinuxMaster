@@ -64,8 +64,7 @@
             <td>=</td>
             <td>변경, 기존의 값은 사라짐.</td>
         </tr>
-    </tbody>
-    
+    </tbody> 
     <tbody>
         <tr>
             <td rowspan=3>설정할 접근권한<br>(permission)</td>
