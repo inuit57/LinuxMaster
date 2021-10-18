@@ -81,13 +81,16 @@
             <td>x</td>
             <td>실행</td>
         </tr>
+    </tbody>
+    <tbody>
         <tr>
+            <td rowspan=2>특수권한</td>
             <td>s</td>
-            <td>u,g만 사용가능<br>특수권한 설정</td>
+            <td>u,g만 사용가능</td>
         </tr>
         <tr>
             <td>t</td>
-            <td>o에만 사용가능<br>특수권한 설정</td>
+            <td>o에만 사용가능</td>
         </tr>
     </tbody>
 </table>
