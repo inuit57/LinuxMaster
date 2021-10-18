@@ -23,10 +23,32 @@
 - 복수 지정은 콤마(,)를 사용하여 구분한다. 
 
 
-|구분|기호|설명|
-|----|---|--------------------|
-||u| user의 약자, 파일이나 디렉터리 소유자를 의미|
-||g|그룹소유자|
-|사용자|o|others의 약자, 기타 사용자를 의미 |
-||a|ALL의 약자, u,g,o 모두를 의미 | 
-|| |아무 문자를 사용하지 않으면 all로 추정
+<table>
+    <thead>
+        <tr>
+            <th>구분</th>
+            <th>기호</th>
+            <th>설명</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan=4>사용자(유저)</td>
+            <td>u</td>
+            <td>user의 약자, 파일이나 디렉터리 소유자를 의미</td>
+        </tr>
+        <tr>
+            <td>g</td>
+            <td>그룹 소유자</td>
+        </tr>
+        <tr>
+            <td>o</td>
+            <td>others, 기타 사용자를 의미</td>
+        </tr>
+        <tr>
+            <td>a(default)</td>
+            <td>All, u+g+o 모두를 의미</td>
+        </tr>
+    </tbody>
+</table>
+
