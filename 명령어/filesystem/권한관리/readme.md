@@ -33,7 +33,7 @@
     </thead>
     <tbody>
         <tr>
-            <td rowspan=4>사용자(유저)</td>
+            <td rowspan=4>사용자<br>(유저)</td>
             <td>u</td>
             <td>user의 약자, 파일이나 디렉터리 소유자를 의미</td>
         </tr>
@@ -48,6 +48,37 @@
         <tr>
             <td>a(default)</td>
             <td>All, u+g+o 모두를 의미</td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td rowspan=3>수행할 명령<br>(연산)</td>
+            <td>+</td>
+            <td>추가</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>제거</td>
+        </tr>
+        <tr>
+            <td>=</td>
+            <td>변경, 기존의 값은 사라짐.</td>
+        </tr>
+    </tbody>
+    
+    <tbody>
+        <tr>
+            <td rowspan=3>설정할 접근권한<br>(permission)</td>
+            <td>r</td>
+            <td>읽기</td>
+        </tr>
+        <tr>
+            <td>w</td>
+            <td>쓰기</td>
+        </tr>
+        <tr>
+            <td>x</td>
+            <td></td>
         </tr>
     </tbody>
 </table>
