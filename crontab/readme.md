@@ -10,5 +10,21 @@
 
 # 설정하는 방법
 1) 명령어를 사용하는 방법 : crontab -e
-2) 파일에 직접 작성하는 방법 : /etc/crontab 파일을 수정
+2) 파일에 직접 작성하는 방법 : /etc/crontab 파일을 수정 (권장 X) 
 
+변경한 뒤에는 cron 명령어를 입력해서 변경사항이 적용되도록 해줘야 한다. 
+
+## crontab 명령어
+- 옵션
+  1) crontab -e : 명령을 등록, 편집 – 맨 처음에 사용 시 편집기를 선택할 수 있다.
+  2) crontab -d : 등록된 명령을 삭제
+  3) crontab -l : 현재 등록된 리스트 출력
+  4) crontab -l -u otheruser : otheruser 사용자가 등록한 crontab 리스트 출력
+  5) crontab -r : 현재 사용자가 등록한 crontab 전체 삭제
+
+
+## 설정 가이드
+1) 한줄에 하나의 명령어만 사용합니다. 
+2) #을 이용해서 주석을 남길 수 있습니다. (쉘 스크립트처럼)
+3) 로그 남기기 : * * * * * doitnow.sh > /var/log/crontab.kog 2>%1
+4) 백업 남기기 : 00 00 * * * crontab -l > /home/crontab_bak (주기적으로 크론템 파일을 백업)
