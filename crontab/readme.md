@@ -13,6 +13,12 @@
 2) 파일에 직접 작성하는 방법 : /etc/crontab 파일을 수정 (권장 X) 
 
 변경한 뒤에는 cron 명령어를 입력해서 변경사항이 적용되도록 해줘야 한다. 
+```
+service cron status # checks if cron is running
+service cron start  # 단순리 크론을 다시 시작하라는 명령으로 기존 아직 끝나지 않는 명령 리스트를 그대로 가지고 시작한다.  
+service cron restart  # 기존 크론 작업 리스트를 버리고 새로운 작업 리스트로 작업
+service cron stop   # stops it
+```
 
 ## crontab 명령어
 - 옵션
@@ -28,3 +34,37 @@
 2) #을 이용해서 주석을 남길 수 있습니다. (쉘 스크립트처럼)
 3) 로그 남기기 : * * * * * doitnow.sh > /var/log/crontab.kog 2>%1
 4) 백업 남기기 : 00 00 * * * crontab -l > /home/crontab_bak (주기적으로 크론템 파일을 백업)
+
+
+# 사용예시
+![image](https://user-images.githubusercontent.com/24216471/137835528-21ab0ba0-1eeb-4e87-8e88-36394c6f1fba.png)
+
+## 1분마다 실행할 것
+```
+* * * * * doitnow.sh
+```
+
+## 동일 프로세스를 10분마다 실행
+```
+*/10 * * * * doitnow.sh
+```
+## 매시 15분마다 실행
+```
+15 * * * * doitnow.sh
+```
+## 1시간마다 실행
+```
+0 * * * * doitnow.sh
+```
+## 2시간마다 실행
+```
+0 */2 * * * doitnow.sh
+```
+## 오전 11시와 오후 4시마다 실행
+```
+00 11,16 * * * /home/ramesh/bin/incremental-backup
+```
+## 근무시간(9시 ~ 오후 6) 내 매시간 실행
+특정 작업이 근무 시간에만 실행되도록 설정하기 위해서는 시간을 09-18과 같은 표현을 사용합니다.
+
+00 09-18 * * * /home/ramesh/bin/check-db-status
