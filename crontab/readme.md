@@ -26,7 +26,7 @@ service cron stop   # stops it
   2) crontab -d : 등록된 명령을 삭제
   3) crontab -l : 현재 등록된 리스트 출력
   4) crontab -l -u otheruser : otheruser 사용자가 등록한 crontab 리스트 출력
-  5) crontab -r : 현재 사용자가 등록한 crontab 전체 삭제
+  5) crontab -r : 현재 사용자가 등록한 crontab **전체 삭제**
 
 
 ## 설정 가이드
