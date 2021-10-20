@@ -48,6 +48,25 @@ firewall-cmd --permanent --zone=public --remove-port=[포트번호]/[프로토�
 # 항상 설정한 뒤에는 firewall-cmd --reload 로 재시작해야 한다. 
 ```
 
+## 방화벽 상태 확인 
+```
+# 활성화된 포트/서비스 확인
+firewall-cmd --list-ports 
+firewall-cmd --list-services
+
+# 설정된 내용 모두 확인
+firewall-cmd --list-all
+
+# 현재 상태 확인
+firewall-cmd --state
+
+# 현재 적용되고 있는 zone 확인
+firewall-cmd --get-default-zone
+
+# 활성화되어있는 zone 확인
+firewall-cmd --get-active-zone
+```
+
 
 
 
