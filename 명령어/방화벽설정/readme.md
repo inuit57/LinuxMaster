@@ -1,3 +1,5 @@
+# firewalld
+
 자료 참고
 - [자료1](https://it-serial.com/6)
  
@@ -14,6 +16,40 @@
   - Zone은 보안그룹과 유사한 역할을 수행한다. 방화벽 설정을 묶어놓고 상황에 따라서 다르게 적용한다. 
   - 시스템 개별 설정은 /etc/firewalld 에 있으며 firewalld 동작은 /etc/firewalld/firewalld.conf에서 설정할 수 있다. 
   
-  
+# 명령어
+
+## 방화벽 시작 및 종료
+```
+systemctl start firewalld  # 방화벽 시작
+systemctl enable firewalld # 재부팅시에 자동실행
+
+systemctl stop firewalld   # 방화벽 중지
+systemctl disable firewalld # 재부팅시에 자동실행하지 않음 
+```
+
+## 방화벽 설정 후 적용
+```
+firewall-cmd --reload
+
+# (주의!) 설정을 저장하고 재시작하지 않으면 적용이 되지 않습니다. 
+```
+
+## 방화벽에 Port 추가/제거
+```
+firewall-cmd --permanent --zone=public --add-port=[포트번호]/[프로토콜]
+# firewall-cmd --permanent --zone=public --add-port=8080/tcp 
+# --permanent : 영구적으로 적용
+# --zone=public : public zone(default)에 적용
+# --add-port= : 포트 추가 
+
+firewall-cmd --permanent --zone=public --remove-port=[포트번호]/[프로토콜]
+# firewall-cmd --permanent --zone=public --remove-port=8080/tcp
+
+# 항상 설정한 뒤에는 firewall-cmd --reload 로 재시작해야 한다. 
+```
+
+
+
+
   
 
