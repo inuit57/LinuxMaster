@@ -31,4 +31,4 @@ $ nohup 명령어 & > /dev/null
 
 ## 자료 참고
 - [자료1](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=lge920904&logNo=220687339025)
-- [자료2 : /dev/null] (http://minsone.github.io/shell/shell-dev-null)
+- [자료2 : /dev/null](http://minsone.github.io/shell/shell-dev-null)
