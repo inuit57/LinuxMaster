@@ -1,5 +1,3 @@
-- 자료 참고
-- [자료1](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=lge920904&logNo=220687339025)
 
 # 개요 
 - 명령어를 백그라운드에서 실행시키는 경우.
@@ -31,3 +29,6 @@ $ nohup 명령어 & > /dev/null
 - 참고로 /dev/null 로 출력방향을 돌려줄 경우, 모든 출력결과는 버려지게 됩니다. 
 
 
+## 자료 참고
+- [자료1](https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=lge920904&logNo=220687339025)
+- [자료2 : /dev/null] (http://minsone.github.io/shell/shell-dev-null)
